@@ -9,7 +9,8 @@ import {
   SegwitBech32Wallet,
 } from './';
 import { LightningCustodianWallet } from './lightning-custodian-wallet';
-let encryption = require('../encryption');
+import WatchConnectivity from '../WatchConnectivity';
+const encryption = require('../encryption');
 
 export class AppStorage {
   static FLAG_ENCRYPTED = 'data_encrypted';
@@ -26,24 +27,8 @@ export class AppStorage {
     this.settings = {
       brandingColor: '#ffffff',
       foregroundColor: '#0c2550',
-      buttonBackgroundColor: '#ccddf9',
+      buttonBackground: '#ffffff',
       buttonTextColor: '#0c2550',
-      buttonAlternativeTextColor: '#2f5fb3',
-      buttonDisabledBackgroundColor: '#eef0f4',
-      buttonDisabledTextColor: '#9aa0aa',
-      inputBorderColor: '#d2d2d2',
-      inputBackgroundColor: '#f5f5f5',
-      alternativeTextColor: '#9aa0aa',
-      alternativeTextColor2: '#0f5cc0',
-      buttonBlueBackgroundColor: '#ccddf9',
-      incomingBackgroundColor: '#d2f8d6',
-      incomingForegroundColor: '#37c0a1',
-      outgoingBackgroundColor: '#f8d2d2',
-      outgoingForegroundColor: '#d0021b',
-      successColor: '#37c0a1',
-      failedColor: '#ff0000',
-      shadowColor: '#000000',
-      inverseForegroundColor: '#ffffff',
     };
   }
 
@@ -199,6 +184,8 @@ export class AppStorage {
             this.tx_metadata = data.tx_metadata;
           }
         }
+        WatchConnectivity.init();
+        await WatchConnectivity.shared.sendWalletsToWatch();
         return true;
       } else {
         return false; // failed loading data or loading/decryptin data
@@ -269,7 +256,8 @@ export class AppStorage {
     } else {
       await AsyncStorage.setItem(AppStorage.FLAG_ENCRYPTED, ''); // drop the flag
     }
-
+    WatchConnectivity.init();
+    WatchConnectivity.shared.sendWalletsToWatch();
     return AsyncStorage.setItem('data', JSON.stringify(data));
   }
 
