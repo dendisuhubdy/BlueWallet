@@ -9,6 +9,8 @@ target 'BlueWallet' do
 
   # Pods for BlueWallet
 
+  pod 'RNWatch', :path => '../node_modules/react-native-watch-connectivity'
+
   target 'BlueWalletTests' do
     inherit! :search_paths
     # Pods for testing
