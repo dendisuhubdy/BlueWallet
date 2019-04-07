@@ -1,0 +1,24 @@
+{
+  "name": "RNWatch",
+  "version": "0.2.0",
+  "summary": "An API for communicating with iWatch apps within React Native iOS apps",
+  "homepage": "https://github.com/npm/mtford90/react-native-watch-connectivity.git",
+  "authors": "Michael Ford <mtford@gmail.com>",
+  "license": "BSD",
+  "source": {
+    "git": "https://github.com/npm/mtford90/react-native-watch-connectivity.git",
+    "tag": "0.2.0"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0",
+    "tvos": "9.0"
+  },
+  "preserve_paths": "*",
+  "source_files": "*.{h,m}",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

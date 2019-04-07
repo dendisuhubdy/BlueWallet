@@ -1,0 +1,6 @@
+framework module RNWatch {
+  umbrella header "RNWatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
