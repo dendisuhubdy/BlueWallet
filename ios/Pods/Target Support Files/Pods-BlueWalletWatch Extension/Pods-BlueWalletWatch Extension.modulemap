@@ -1,4 +1,4 @@
-framework module Pods_BlueWalletWatch_Extension {
+module Pods_BlueWalletWatch_Extension {
   umbrella header "Pods-BlueWalletWatch Extension-umbrella.h"
 
   export *

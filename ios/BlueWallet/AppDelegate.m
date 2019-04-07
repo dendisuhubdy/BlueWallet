@@ -56,4 +56,14 @@
   [session activateSession];
 }
 
+- (void)session:(nonnull WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error {
+  
+}
+
+
+- (void)sessionDidBecomeInactive:(nonnull WCSession *)session {
+  
+}
+
+
 @end

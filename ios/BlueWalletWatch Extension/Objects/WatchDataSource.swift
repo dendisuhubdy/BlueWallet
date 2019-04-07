@@ -93,7 +93,7 @@ class WatchDataSource: NSObject, WCSessionDelegate {
     if activationState == .activated {
       WCSession.default.sendMessage([:], replyHandler: nil, errorHandler: nil)
       if let existingData = keychain.getData(Wallet.identifier), let walletData = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(existingData) as? [Wallet] {
-        guard let walletData = walletData, walletData != self.wallets  else { return }
+        guard walletData != self.wallets  else { return }
         wallets = walletData
         WatchDataSource.postDataUpdatedNotification()
       }
