@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#import <React/RCTLinkingManager.h>
+#import "RCTLinkingManager.h"
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #if __has_include(<React/RNSentry.h>)

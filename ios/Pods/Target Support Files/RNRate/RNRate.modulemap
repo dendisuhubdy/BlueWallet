@@ -1,0 +1,6 @@
+framework module RNRate {
+  umbrella header "RNRate-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,48 +1,136 @@
-project 'BlueWallet.xcodeproj'
 
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'BlueWallet' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
+workspace 'BlueWallet'
 
-  # Pods for BlueWallet
-# React Native requirements
-pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga'
-pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
-pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
-pod 'React', path: '../node_modules/react-native', :subspecs => [
-  'Core',
-  'cxxreact',
-  'CxxBridge',
-  'RCTText',
-  'RCTNetwork',
-  'RCTWebSocket', # needed for debugging
-  'RCTActionSheet',
-  'RCTAnimation',
-  'RCTImage' ]
-
-  pod 'RNWatch', :path => '../node_modules/react-native-watch-connectivity'
+def sharedPods
+    pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge', # Include this for RN >= 0.47
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',
+    'RCTImage', # <-- Add RCTImage
+    'RCTNetwork',
+    'RCTWebSocket', # Needed for debugging
+    'RCTAnimation', # Needed for FlatList and animations running on native UI thread
+    # Add any other subspecs you want to use in your project
+    ]
+    # Explicitly include Yoga if you are using RN >= 0.42.0
+    pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+    
+    # Third party deps podspec link
+    pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+    pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+    pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+    
 end
-  target 'BlueWalletTests' do
+
+target 'BlueWallet' do
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    #  use_frameworks!
+    project 'BlueWallet.xcodeproj'
+    
+    # Pods for BlueWallet
+    # React Native requirements
+
+    sharedPods
+    pod 'RNWatch', :path => '../node_modules/react-native-watch-connectivity'
+    pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+    
+    pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+    
+    pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+    
+    pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+    
+    pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+    
+    pod 'RNFS', :path => '../node_modules/react-native-fs'
+    
+    pod 'react-native-google-analytics-bridge', :path => '../node_modules/react-native-google-analytics-bridge'
+    
+    pod 'react-native-haptic-feedback', :path => '../node_modules/react-native-haptic-feedback'
+    
+    pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+  
+    pod 'RNRate', :path => '../node_modules/react-native-rate/ios'
+    
+    pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+    
+    pod 'RNSVG', :path => '../node_modules/react-native-svg'
+    
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+    
+    pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
+    
+    pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
+    
+    pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
+    
+end
+
+target 'BlueWalletTests' do
     inherit! :search_paths
     # Pods for testing
 
 end
 
 target 'BlueWalletWatch' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  #  use_frameworks!
-  # Pods for BlueWalletWatch
-
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    # Pods for BlueWalletWatch
+    
 end
 
 target 'BlueWalletWatch Extension' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  #  use_frameworks!
-  pod 'EFQRCode', '~> 4.5.0'
-  # Pods for BlueWalletWatch Extension
-
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    pod 'EFQRCode', '~> 5.0.0'
+    # Pods for BlueWalletWatch Extension
 end
+
+
+target 'TcpSockets' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    project '../node_modules/react-native-tcp/ios/TcpSockets.xcodeproj'
+    sharedPods
+end
+
+target 'ToolTipMenu' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    project '../node_modules/react-native-tooltip/ToolTipMenu.xcodeproj'
+    sharedPods
+end
+
+target 'RCTQRCodeLocalImage' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    project '../node_modules/@remobile/react-native-qrcode-local-image/ios/RCTQRCodeLocalImage.xcodeproj'
+    sharedPods
+end
+
+target 'RCTPrivacySnapshot' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    project '../node_modules/react-native-privacy-snapshot/RCTPrivacySnapshot.xcodeproj'
+    sharedPods
+end
+
+target 'RCTLinking' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    #  use_frameworks!
+    project '../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj'
+    sharedPods
+end
+
+
+#post_install do |installer_representation|
+#    installer_representation.pods_project.targets.each do |target|
+#        if target.name == "React"
+#            target.remove_from_project
+#        end
+#    end
+#end
