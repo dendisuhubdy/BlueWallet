@@ -12,6 +12,7 @@ def sharedPods
     'RCTText',
     'RCTImage', # <-- Add RCTImage
     'RCTNetwork',
+    'RCTLinkingIOS',
     'RCTWebSocket', # Needed for debugging
     'RCTAnimation', # Needed for FlatList and animations running on native UI thread
     # Add any other subspecs you want to use in your project
@@ -118,14 +119,6 @@ target 'RCTPrivacySnapshot' do
     project '../node_modules/react-native-privacy-snapshot/RCTPrivacySnapshot.xcodeproj'
     sharedPods
 end
-
-target 'RCTLinking' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    #  use_frameworks!
-    project '../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj'
-    sharedPods
-end
-
 
 #post_install do |installer_representation|
 #    installer_representation.pods_project.targets.each do |target|
