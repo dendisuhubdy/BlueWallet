@@ -19,7 +19,4 @@
    <FileRef
       location = "group:../node_modules/react-native-tooltip/ToolTipMenu.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj">
-   </FileRef>
 </Workspace>
