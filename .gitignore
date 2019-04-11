@@ -59,4 +59,4 @@ buck-out/
 release-notes.json
 release-notes.txt
 
-#ios/Pods/
+ios/Pods/
