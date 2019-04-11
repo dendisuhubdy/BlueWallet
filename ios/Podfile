@@ -77,6 +77,8 @@ target 'BlueWallet' do
     
     pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
     
+    pod 'ToolTipMenu', :path => '../node_modules/react-native-tooltip'
+    
 end
 
 target 'BlueWalletTests' do
@@ -105,13 +107,6 @@ target 'TcpSockets' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     #  use_frameworks!
     project '../node_modules/react-native-tcp/ios/TcpSockets.xcodeproj'
-    sharedPods
-end
-
-target 'ToolTipMenu' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    #  use_frameworks!
-    project '../node_modules/react-native-tooltip/ToolTipMenu.xcodeproj'
     sharedPods
 end
 
