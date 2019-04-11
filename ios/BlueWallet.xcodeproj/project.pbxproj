@@ -39,7 +39,6 @@
 		B40D4E34225841EC00428FCC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40D4E32225841EC00428FCC /* Interface.storyboard */; };
 		B40D4E36225841ED00428FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40D4E35225841ED00428FCC /* Assets.xcassets */; };
 		B40D4E3D225841ED00428FCC /* BlueWalletWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B40D4E3C225841ED00428FCC /* BlueWalletWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B40D4E42225841ED00428FCC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E41225841ED00428FCC /* InterfaceController.swift */; };
 		B40D4E44225841ED00428FCC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E43225841ED00428FCC /* ExtensionDelegate.swift */; };
 		B40D4E46225841ED00428FCC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E45225841ED00428FCC /* NotificationController.swift */; };
 		B40D4E48225841ED00428FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40D4E47225841ED00428FCC /* Assets.xcassets */; };
@@ -47,8 +46,6 @@
 		B40D4E5D2258425500428FCC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E552258425400428FCC /* InterfaceController.swift */; };
 		B40D4E5E2258425500428FCC /* NumericKeypadInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E562258425400428FCC /* NumericKeypadInterfaceController.swift */; };
 		B40D4E602258425500428FCC /* SpecifyInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E582258425400428FCC /* SpecifyInterfaceController.swift */; };
-		B40D4E612258425500428FCC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E592258425400428FCC /* ExtensionDelegate.swift */; };
-		B40D4E622258425500428FCC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E5A2258425500428FCC /* NotificationController.swift */; };
 		B40D4E632258425500428FCC /* ReceiveInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E5B2258425500428FCC /* ReceiveInterfaceController.swift */; };
 		B40D4E642258425500428FCC /* WalletDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E5C2258425500428FCC /* WalletDetailsInterfaceController.swift */; };
 		B40D4E682258426B00428FCC /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D4E672258426B00428FCC /* KeychainSwiftDistrib.swift */; };
@@ -188,7 +185,6 @@
 		B40D4E35225841ED00428FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40D4E37225841ED00428FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40D4E3C225841ED00428FCC /* BlueWalletWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BlueWalletWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40D4E41225841ED00428FCC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		B40D4E43225841ED00428FCC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B40D4E45225841ED00428FCC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		B40D4E47225841ED00428FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,8 +193,6 @@
 		B40D4E552258425400428FCC /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		B40D4E562258425400428FCC /* NumericKeypadInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericKeypadInterfaceController.swift; sourceTree = "<group>"; };
 		B40D4E582258425400428FCC /* SpecifyInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecifyInterfaceController.swift; sourceTree = "<group>"; };
-		B40D4E592258425400428FCC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		B40D4E5A2258425500428FCC /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		B40D4E5B2258425500428FCC /* ReceiveInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveInterfaceController.swift; sourceTree = "<group>"; };
 		B40D4E5C2258425500428FCC /* WalletDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletDetailsInterfaceController.swift; sourceTree = "<group>"; };
 		B40D4E672258426B00428FCC /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = SOURCE_ROOT; };
@@ -432,12 +426,9 @@
 			children = (
 				B43D03242258474500FBAA95 /* Objects */,
 				B40D4E672258426B00428FCC /* KeychainSwiftDistrib.swift */,
-				B40D4E592258425400428FCC /* ExtensionDelegate.swift */,
-				B40D4E41225841ED00428FCC /* InterfaceController.swift */,
 				B40D4E43225841ED00428FCC /* ExtensionDelegate.swift */,
 				B40D4E45225841ED00428FCC /* NotificationController.swift */,
 				B40D4E552258425400428FCC /* InterfaceController.swift */,
-				B40D4E5A2258425500428FCC /* NotificationController.swift */,
 				B40D4E562258425400428FCC /* NumericKeypadInterfaceController.swift */,
 				B40D4E5B2258425500428FCC /* ReceiveInterfaceController.swift */,
 				B40D4E582258425400428FCC /* SpecifyInterfaceController.swift */,
@@ -956,8 +947,6 @@
 				B43D037A225847C500FBAA95 /* Transaction.swift in Sources */,
 				B40D4E602258425500428FCC /* SpecifyInterfaceController.swift in Sources */,
 				B43D0379225847C500FBAA95 /* WatchDataSource.swift in Sources */,
-				B40D4E612258425500428FCC /* ExtensionDelegate.swift in Sources */,
-				B40D4E622258425500428FCC /* NotificationController.swift in Sources */,
 				B40D4E46225841ED00428FCC /* NotificationController.swift in Sources */,
 				B40D4E5D2258425500428FCC /* InterfaceController.swift in Sources */,
 				B43D037B225847C500FBAA95 /* TransactionTableRow.swift in Sources */,
@@ -965,7 +954,6 @@
 				B40D4E642258425500428FCC /* WalletDetailsInterfaceController.swift in Sources */,
 				B40D4E44225841ED00428FCC /* ExtensionDelegate.swift in Sources */,
 				B40D4E682258426B00428FCC /* KeychainSwiftDistrib.swift in Sources */,
-				B40D4E42225841ED00428FCC /* InterfaceController.swift in Sources */,
 				B40D4E632258425500428FCC /* ReceiveInterfaceController.swift in Sources */,
 				B43D0378225847C500FBAA95 /* WalletGradient.swift in Sources */,
 				B40D4E5E2258425500428FCC /* NumericKeypadInterfaceController.swift in Sources */,
