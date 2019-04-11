@@ -3,6 +3,15 @@
 # platform :ios, '9.0'
 platform :ios, '10.0'
 workspace 'BlueWallet'
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            puts "Setting Swift Version setting for #{target.name}..."
+            config.build_settings['SWIFT_VERSION'] = '4.2'
+        end
+    end
+end
+
 
 def sharedPods
     # Explicitly include Yoga if you are using RN >= 0.42.0
@@ -118,12 +127,4 @@ target 'RCTPrivacySnapshot' do
     #  use_frameworks!
     project '../node_modules/react-native-privacy-snapshot/RCTPrivacySnapshot.xcodeproj'
     sharedPods
-end
-    
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '5'  # required by simple_permission
-        end
-    end
 end
