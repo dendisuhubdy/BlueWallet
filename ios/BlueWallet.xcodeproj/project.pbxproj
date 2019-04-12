@@ -16,7 +16,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		16763847ED654C79A4B4BBD5 /* ToolTipMenuTests.xctest in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448882949434D41A054C0B2 /* ToolTipMenuTests.xctest */; };
 		267263A381F944A9AAB0FA0A /* libRNSentry-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F11DD40F6E9A4F13B3410B94 /* libRNSentry-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -58,7 +57,6 @@
 		B44D665E562B4F289F09D327 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1F51A83D044F3BB26A35FC /* libRNSVG-tvOS.a */; };
 		C1056BF235EE4E23AAF21975 /* libRCTQRCodeLocalImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B642AFB13483418CAB6FF25E /* libRCTQRCodeLocalImage.a */; };
 		C50F1706310E40F3B28D4856 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7F1B8332C6439793D55B45 /* EvilIcons.ttf */; };
-		C98BD93429374073A736EFBD /* libToolTipMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F86BC5194548CA87D729A9 /* libToolTipMenu.a */; };
 		CACD479D705745BC8CF1026B /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A8F67CF29564E41882ECEF8 /* FontAwesome5_Brands.ttf */; };
 		CE21ACFC6EE18FE5B91A0212 /* libPods-BlueWalletWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0B98D8054B95DEE18B907F /* libPods-BlueWalletWatch.a */; };
 		CF81A1855609466D90635511 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA741BA794714D3F80251AC9 /* Ionicons.ttf */; };
@@ -245,8 +243,6 @@
 				764B49B1420D4AEB8109BF62 /* libsqlite3.0.tbd in Frameworks */,
 				C1056BF235EE4E23AAF21975 /* libRCTQRCodeLocalImage.a in Frameworks */,
 				34582CAA4AD140F7B80C961A /* libTcpSockets.a in Frameworks */,
-				C98BD93429374073A736EFBD /* libToolTipMenu.a in Frameworks */,
-				16763847ED654C79A4B4BBD5 /* ToolTipMenuTests.xctest in Frameworks */,
 				01AB943FA0794E91B65F0BFE /* libRCTPrivacySnapshot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
