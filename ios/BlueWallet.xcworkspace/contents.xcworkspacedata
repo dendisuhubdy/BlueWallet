@@ -16,7 +16,4 @@
    <FileRef
       location = "group:../node_modules/react-native-privacy-snapshot/RCTPrivacySnapshot.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../node_modules/react-native-tooltip/ToolTipMenu.xcodeproj">
-   </FileRef>
 </Workspace>
