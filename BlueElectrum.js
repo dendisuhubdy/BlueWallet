@@ -1,10 +1,10 @@
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 const ElectrumClient = require('electrum-client');
 let bitcoin = require('bitcoinjs-lib');
 let reverse = require('buffer-reverse');
 
 const storageKey = 'ELECTRUM_PEERS';
-const defaultPeer = { host: 'electrum.coinucopia.io', tcp: 50001 };
+const defaultPeer = { host: 'electrum.coinucopia.io', tcp: '50001' };
 const hardcodedPeers = [
   // { host: 'noveltybobble.coinjoined.com', tcp: '50001' }, // down
   // { host: 'electrum.be', tcp: '50001' },

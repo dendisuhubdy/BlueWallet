@@ -57,6 +57,8 @@ class WalletDetailsInterfaceController: WKInterfaceController {
       controller.memo = transaction.memo
       controller.time = transaction.time
     }
+    transactionsTable.setHidden(wallet?.transactions.isEmpty ?? true)
+    noTransactionsLabel.setHidden(!(wallet?.transactions.isEmpty ?? false))
   }
   
   override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {

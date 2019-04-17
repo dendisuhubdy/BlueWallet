@@ -11,10 +11,10 @@ import {
   TouchableWithoutFeedback,
   StyleSheet,
   Platform,
-  AsyncStorage,
   Text,
 } from 'react-native';
 import { Icon } from 'react-native-elements';
+import AsyncStorage from '@react-native-community/async-storage';
 import {
   BlueNavigationStyle,
   BlueButton,

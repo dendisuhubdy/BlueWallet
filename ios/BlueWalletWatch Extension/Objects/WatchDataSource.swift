@@ -86,7 +86,7 @@ class WatchDataSource: NSObject, WCSessionDelegate {
   }
   
   func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-    WatchDataSource.shared.processWalletsData(walletsInfo: userInfo)
+   // WatchDataSource.shared.processWalletsData(walletsInfo: userInfo)
   }
   
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

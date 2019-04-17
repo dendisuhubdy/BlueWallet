@@ -45,6 +45,7 @@ target 'BlueWallet' do
 
     sharedPods
     pod 'RNWatch', :path => '../node_modules/react-native-watch-connectivity'
+    
     pod 'react-native-webview', :path => '../node_modules/react-native-webview'
     
     pod 'react-native-camera', :path => '../node_modules/react-native-camera'
@@ -77,8 +78,11 @@ target 'BlueWallet' do
     
     pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
     
-    pod 'ToolTipMenu', :path => '../node_modules/react-native-tooltip'
     
+  pod 'ToolTipMenu', :path => '../node_modules/react-native-tooltip'
+
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
 end
 
 target 'BlueWalletTests' do

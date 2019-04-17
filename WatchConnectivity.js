@@ -27,7 +27,7 @@ export default class WatchConnectivity {
           reply({ invoicePaymentRequest: createInvoiceRequest });
         }
       } else {
-        reply(err)
+        reply(err);
       }
     });
   }
@@ -130,14 +130,6 @@ export default class WatchConnectivity {
         }
 
         watch.updateApplicationContext({ wallets });
-        // watch.sendUserInfo({ wallets });
-        watch.subscribeToMessages((err, message, _reply) => {
-          if (!err) {
-            if (message.message === 'sendApplicationContext') {
-              watch.sendUserInfo({ wallets });
-            }
-          }
-        });
       }
     });
   }

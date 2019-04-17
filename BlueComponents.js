@@ -36,6 +36,7 @@ let loc = require('./loc/');
 let BlueApp = require('./BlueApp');
 const { height, width } = Dimensions.get('window');
 const aspectRatio = height / width;
+const BigNumber = require('bignumber.js');
 let isIpad;
 if (aspectRatio > 1.6) {
   isIpad = false;
@@ -1733,7 +1734,7 @@ export class BlueAddressInput extends Component {
 export class BlueBitcoinAmount extends Component {
   static propTypes = {
     isLoading: PropTypes.bool,
-    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     onChangeText: PropTypes.func,
     disabled: PropTypes.bool,
     unit: PropTypes.string,
@@ -1741,11 +1742,19 @@ export class BlueBitcoinAmount extends Component {
 
   static defaultProps = {
     unit: BitcoinUnit.BTC,
+    amount: '0'
   };
 
   render() {
-    const amount = typeof this.props.amount === 'number' ? this.props.amount.toString() : this.props.amount;
-
+    const amount = this.props.amount || 0;
+    localCurrency = loc.formatBalanceWithoutSuffix(amount, BitcoinUnit.LOCAL_CURRENCY, false);
+    if (this.props.unit === BitcoinUnit.BTC) {
+      let sat = new BigNumber(amount);
+      sat = sat.multipliedBy(100000000).toString();
+      localCurrency = loc.formatBalanceWithoutSuffix(sat, BitcoinUnit.LOCAL_CURRENCY, false);
+    } else {
+      localCurrency = loc.formatBalanceWithoutSuffix(amount.toString(), BitcoinUnit.LOCAL_CURRENCY, false);
+    }
     return (
       <TouchableWithoutFeedback disabled={this.props.pointerEvents === 'none'} onPress={() => this.textInput.focus()}>
         <View>
@@ -1788,13 +1797,7 @@ export class BlueBitcoinAmount extends Component {
             </Text>
           </View>
           <View style={{ alignItems: 'center', marginBottom: 22, marginTop: 4 }}>
-            <Text style={{ fontSize: 18, color: '#d4d4d4', fontWeight: '600' }}>
-              {loc.formatBalance(
-                this.props.unit === BitcoinUnit.BTC ? amount || 0 : loc.formatBalanceWithoutSuffix(amount || 0, BitcoinUnit.BTC, false),
-                BitcoinUnit.LOCAL_CURRENCY,
-                false,
-              )}
-            </Text>
+            <Text style={{ fontSize: 18, color: '#d4d4d4', fontWeight: '600' }}>{localCurrency}</Text>
           </View>
         </View>
       </TouchableWithoutFeedback>

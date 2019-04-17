@@ -11,7 +11,6 @@ global.crypto = require('crypto'); // shall be used by tests under nodejs CLI, b
 let assert = require('assert');
 jest.mock('react-native-qrcode-svg', () => 'Video');
 const AsyncStorage = new MockStorage();
-jest.setMock('AsyncStorage', AsyncStorage);
 jest.useFakeTimers();
 jest.mock('Picker', () => {
   // eslint-disable-next-line import/no-unresolved
