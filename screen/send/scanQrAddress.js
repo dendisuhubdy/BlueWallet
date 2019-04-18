@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, Image, View, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import Camera from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 import Permissions from 'react-native-permissions';
 import { SafeBlueArea } from '../../BlueComponents';
 
@@ -48,14 +48,18 @@ export default class CameraExample extends React.Component {
     } else {
       return (
         <SafeBlueArea style={{ flex: 1 }}>
-          <Camera style={{ flex: 1, justifyContent: 'space-between' }} onBarCodeRead={ret => this.onBarCodeScanned(ret)}>
+          <RNCamera
+            captureAudio={false}
+            style={{ flex: 1, justifyContent: 'space-between' }}
+            onBarCodeRead={ret => this.onBarCodeScanned(ret)}
+          >
             <TouchableOpacity
               style={{ width: 40, height: 80, padding: 14, marginTop: 32 }}
               onPress={() => this.props.navigation.goBack(null)}
             >
               <Image style={{ alignSelf: 'center' }} source={require('../../img/close.png')} />
             </TouchableOpacity>
-          </Camera>
+          </RNCamera>
         </SafeBlueArea>
       );
     }
