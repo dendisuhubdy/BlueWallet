@@ -91,9 +91,9 @@ export default class ReceiveDetails extends Component {
               color={BlueApp.settings.foregroundColor}
               logoBackgroundColor={BlueApp.settings.brandingColor}
             />}
-            <BlueCopyTextToClipboard text={this.state.addressText} />
           </View>
-          <View style={{ flex: 0.2, marginBottom: 24, alignItems: 'center' }}>
+          <View style={{ alignItems: 'center' }}>
+          <BlueCopyTextToClipboard text={this.state.addressText} />
             <BlueButtonLink
               title={loc.receive.details.setAmount}
               onPress={() => {
