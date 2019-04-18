@@ -2,7 +2,7 @@
 import React from 'react';
 import { ActivityIndicator, Image, View, TouchableOpacity } from 'react-native';
 import { BlueText, SafeBlueArea, BlueButton } from '../../BlueComponents';
-import Camera from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 import Permissions from 'react-native-permissions';
 import { SegwitP2SHWallet, LegacyWallet, WatchOnlyWallet, HDLegacyP2PKHWallet } from '../../class';
 import PropTypes from 'prop-types';
@@ -268,14 +268,14 @@ export default class ScanQrWif extends React.Component {
             } else {
               return (
                 <SafeBlueArea style={{ flex: 1 }}>
-                  <Camera style={{ flex: 1 }} onBarCodeRead={ret => this.onBarCodeScanned(ret)}>
+                  <RNCamera captureAudio={false} style={{ flex: 1 }} onBarCodeRead={ret => this.onBarCodeScanned(ret)}>
                     <TouchableOpacity
                       style={{ width: 80, height: 80, padding: 14, marginTop: 32 }}
                       onPress={() => this.props.navigation.goBack(null)}
                     >
                       <Image style={{ alignSelf: 'center' }} source={require('../../img/close.png')} />
                     </TouchableOpacity>
-                  </Camera>
+                  </RNCamera>
                 </SafeBlueArea>
               );
             }
