@@ -243,7 +243,11 @@ export class BlueCopyTextToClipboard extends Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    return { hasTappedText: state.hasTappedText, address: props.text }
+    if (state.hasTappedText) {
+      return { hasTappedText: state.hasTappedText, address: state.address }
+    } else {
+      return { hasTappedText: state.hasTappedText, address: props.text }
+    }
   }
 
   copyToClipboard = () => {
