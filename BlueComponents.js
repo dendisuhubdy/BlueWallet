@@ -242,6 +242,10 @@ export class BlueCopyTextToClipboard extends Component {
     this.state = { hasTappedText: false, address: props.text };
   }
 
+  static getDerivedStateFromProps(props, state) {
+    return { hasTappedText: state.hasTappedText, address: props.text }
+  }
+
   copyToClipboard = () => {
     this.setState({ hasTappedText: true }, () => {
       Clipboard.setString(this.props.text);
@@ -1742,12 +1746,12 @@ export class BlueBitcoinAmount extends Component {
 
   static defaultProps = {
     unit: BitcoinUnit.BTC,
-    amount: '0'
+    amount: '0',
   };
 
   render() {
     const amount = this.props.amount || 0;
-    localCurrency = loc.formatBalanceWithoutSuffix(amount, BitcoinUnit.LOCAL_CURRENCY, false);
+    let localCurrency = loc.formatBalanceWithoutSuffix(amount, BitcoinUnit.LOCAL_CURRENCY, false);
     if (this.props.unit === BitcoinUnit.BTC) {
       let sat = new BigNumber(amount);
       sat = sat.multipliedBy(100000000).toString();
