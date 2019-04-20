@@ -53,7 +53,6 @@ target 'BlueWallet' do
     
     pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
     
-    pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
     
     pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
     
