@@ -81,8 +81,6 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - ReactNativePermissions (1.1.1):
-    - React
   - RNCAsyncStorage (1.3.3):
     - React
   - RNDeviceInfo (1.5.0):
@@ -133,7 +131,6 @@ DEPENDENCIES:
   - React/RCTNetwork (from `../node_modules/react-native`)
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
-  - ReactNativePermissions (from `../node_modules/react-native-permissions`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFS (from `../node_modules/react-native-fs`)
@@ -178,8 +175,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/slider"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
-  ReactNativePermissions:
-    :path: "../node_modules/react-native-permissions"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
@@ -218,7 +213,6 @@ SPEC CHECKSUMS:
   react-native-randombytes: d3184d351604f78e019535178766590188bbc133
   react-native-slider: 743940825f1fa1b37e8396ffd8cebe41f4967e1f
   react-native-webview: a42108b827082f8f0333529b0772102031d5960d
-  ReactNativePermissions: 9f2d9c45c98800795e6c2ed330e25d11a66a8169
   RNCAsyncStorage: 289488409d0c42f30e12535e3f45c5bd3cfc73d2
   RNDeviceInfo: 08dd79c5adef48b6dc103bf3ddf208039aa78664
   RNFS: bbb1a64eb245763daf34aea86f97c97c4e85f74c
@@ -233,6 +227,6 @@ SPEC CHECKSUMS:
   ToolTipMenu: a01f5df49eb1a1ffbc5e1e81d2ec42b832436421
   yoga: 128daf064cacaede0c3bb27424b6b4c71052e6cd
 
-PODFILE CHECKSUM: 9b6565c255a45f141245ad0fcc40643b818291e0
+PODFILE CHECKSUM: b32b0f805e61064fc6fec20960b232901d8d1524
 
 COCOAPODS: 1.5.3

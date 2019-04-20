@@ -54,26 +54,14 @@
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>This alert should not show up as we do not require this data</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
 	<key>NSCameraUsageDescription</key>
-	<string>In order to quickly scan the recipient's address, we need your permission to use the camera to scan their QR Code.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
+	<string>In order to quickly scan the recipient&apos;s address, we need your permission to use the camera to scan their QR Code.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
-	<key>NSMotionUsageDescription</key>
 	<string>This alert should not show up as we do not require this data</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This alert should not show up as we do not require this data</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>In order to import an image for scanning, we need your permission to access your photo library.</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>This alert should not show up as we do not require this data</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
