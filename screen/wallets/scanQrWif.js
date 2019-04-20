@@ -25,7 +25,7 @@ export default class ScanQrWif extends React.Component {
     isLoading: false,
   };
 
-  async onBarCodeScanned(ret) {
+  onBarCodeScanned = async ret => {
     if (+new Date() - this.lastTimeIveBeenHere < 6000) {
       this.lastTimeIveBeenHere = +new Date();
       return;
@@ -211,7 +211,7 @@ export default class ScanQrWif extends React.Component {
     await BlueApp.saveToDisk();
     this.props.navigation.popToTop();
     setTimeout(() => EV(EV.enum.WALLETS_COUNT_CHANGED), 500);
-  } // end
+  }; // end
 
   render() {
     if (this.state.isLoading) {
@@ -259,7 +259,8 @@ export default class ScanQrWif extends React.Component {
                     buttonNegative: 'Cancel',
                   }}
                   style={{ flex: 1, justifyContent: 'space-between' }}
-                  onBarCodeRead={ret => this.onBarCodeScanned(ret)}
+                  onBarCodeRead={this.onBarCodeScanned}
+                  barCodeTypes={[RNCamera.Constants.BarCodeType.qr]}
                 />
                 <TouchableOpacity
                   style={{

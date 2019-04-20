@@ -13,14 +13,14 @@ export default class CameraExample extends React.Component {
     isLoading: false,
   };
 
-  onBarCodeScanned(ret) {
+  onBarCodeScanned = ret => {
     if (this.state.isLoading) return;
     this.setState({ isLoading: true }, () => {
-      const onBarScanned = this.props.navigation.getParam('onBarScanned');
+      const onBarScannedProp = this.props.navigation.getParam('onBarScanned');
       this.props.navigation.goBack();
-      onBarScanned(ret.data);
+      onBarScannedProp(ret.data);
     });
-  } // end
+  }; // end
 
   render() {
     return (
@@ -34,7 +34,8 @@ export default class CameraExample extends React.Component {
             buttonNegative: 'Cancel',
           }}
           style={{ flex: 1, justifyContent: 'space-between' }}
-          onBarCodeRead={ret => this.onBarCodeScanned(ret)}
+          onBarCodeRead={this.onBarCodeScanned}
+          barCodeTypes={[RNCamera.Constants.BarCodeType.qr]}
         />
         <TouchableOpacity
           style={{
