@@ -1750,7 +1750,6 @@ export class BlueBitcoinAmount extends Component {
 
   static defaultProps = {
     unit: BitcoinUnit.BTC,
-    amount: '0',
   };
 
   render() {
