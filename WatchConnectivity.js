@@ -48,9 +48,6 @@ export default class WatchConnectivity {
     InteractionManager.runAfterInteractions(async () => {
       if (this.isAppInstalled) {
         const allWallets = this.BlueApp.getWallets();
-        if (!(allWallets.length > 0)) {
-          return;
-        }
         let wallets = [];
         for (const wallet of allWallets) {
           let receiveAddress = '';
