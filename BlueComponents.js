@@ -25,7 +25,6 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import { LightningCustodianWallet } from './class';
 import Carousel from 'react-native-snap-carousel';
-import DeviceInfo from 'react-native-device-info';
 import { BitcoinUnit } from './models/bitcoinUnits';
 import NavigationService from './NavigationService';
 import ImagePicker from 'react-native-image-picker';
@@ -413,29 +412,6 @@ export class BlueFormMultiInput extends Component {
   }
 }
 
-export class BlueFormInputAddress extends Component {
-  render() {
-    return (
-      <FormInput
-        {...this.props}
-        inputStyle={{
-          maxWidth: width - 110,
-          color: BlueApp.settings.foregroundColor,
-          fontSize: (isIpad && 10) || ((is.iphone8() && 12) || 14),
-        }}
-        containerStyle={{
-          marginTop: 5,
-          borderColor: BlueApp.settings.inputBorderColor,
-          borderBottomColor: BlueApp.settings.inputBorderColor,
-          borderWidth: 0.5,
-          borderBottomWidth: 0.5,
-          backgroundColor: BlueApp.settings.inputBackgroundColor,
-        }}
-      />
-    );
-  }
-}
-
 export class BlueHeader extends Component {
   render() {
     return (
@@ -568,13 +544,6 @@ export class BlueSpacingVariable extends Component {
 export class is {
   static ipad() {
     return isIpad;
-  }
-
-  static iphone8() {
-    if (Platform.OS !== 'ios') {
-      return false;
-    }
-    return DeviceInfo.getDeviceId() === 'iPhone10,4';
   }
 }
 
