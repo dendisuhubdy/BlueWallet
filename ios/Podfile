@@ -51,8 +51,7 @@ target 'BlueWallet' do
     
     pod 'react-native-camera', :path => '../node_modules/react-native-camera'
     
-    pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
-    
+    pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'  
     
     pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
     
@@ -77,7 +76,6 @@ target 'BlueWallet' do
     pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
     
     pod 'SentryReactNative', :path => '../node_modules/react-native-sentry'
-    
     
     pod 'ToolTipMenu', :path => '../node_modules/react-native-tooltip'
     

@@ -235,7 +235,7 @@ it('Wallet can fetch balance', async () => {
   assert.ok(w.getUnconfirmedBalance() === 0);
   assert.ok(w._lastBalanceFetch === 0);
   await w.fetchBalance();
-  assert.ok(w.getBalance() === 0.18262);
+  assert.ok(w.getBalance() === 18262000);
   assert.ok(w.getUnconfirmedBalance() === 0);
   assert.ok(w._lastBalanceFetch > 0);
 });
