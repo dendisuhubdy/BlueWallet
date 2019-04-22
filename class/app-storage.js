@@ -119,8 +119,9 @@ export class AppStorage {
     buckets = JSON.parse(buckets);
     buckets.push(encryption.encrypt(JSON.stringify(data), fakePassword));
     this.cachedPassword = fakePassword;
-
-    return AsyncStorage.setItem('data', JSON.stringify(buckets));
+    const bucketsString = JSON.stringify(buckets);
+    await AsyncStorage.setItem('data', bucketsString);
+    return (await AsyncStorage.getItem('data')) === bucketsString;
   }
 
   /**
